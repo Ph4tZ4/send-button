@@ -13,6 +13,8 @@
 ```
 send-button/
 ├─ index.html
+├─ styles.css
+├─ script.js
 └─ README.md
 ```
 
@@ -39,9 +41,9 @@ send-button/
 อย่าแก้ `id`/`class` ที่เกี่ยวข้อง ไม่เช่นนั้นระบบจรวด/คูลดาวน์จะผิดปกติ
 
 ### ปรับแต่งได้
-- โทนสี/พื้นหลัง: ปรับในส่วน `<style>` ของ `index.html` (`body`, `.glass-panel`, `.section-card`)
-- ระยะเวลาโหลดหน้า: ปรับค่าที่คำนวณ `durationMs`/`delayMs` ในสคริปต์ (ช่วงเริ่มต้น 1000–1500ms และดีเลย์ 0–150ms)
-- ปิดแอนิเมชันโหลดหน้า: อาศัย `prefers-reduced-motion` หรือคอมเมนต์สคริปต์ส่วน Page-load
+- โทนสี/พื้นหลัง: ปรับใน `styles.css` (selectors `body`, `.glass-panel`, `.section-card`)
+- ระยะเวลาโหลดหน้า: ปรับค่าที่คำนวณ `durationMs`/`delayMs` ใน `script.js` (ช่วงเริ่มต้น 1000–1500ms และดีเลย์ 0–150ms)
+- ปิดแอนิเมชันโหลดหน้า: อาศัย `prefers-reduced-motion` หรือคอมเมนต์โค้ดส่วน Page-load ใน `script.js`
 
 ### การเข้าถึง (A11y)
 - เคารพ `prefers-reduced-motion`
